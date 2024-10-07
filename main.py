@@ -17,8 +17,8 @@ class TeleData:
         try:
             test_conn = sql_conn.connect(
                 host = "localhost",
-                user = "root",
-                passwd = "LabDB88",
+                user = "< username >",
+                passwd = "< password >",
                 database = self.db_name,
                 )
             if test_conn.is_connected():
@@ -39,8 +39,8 @@ class TeleData:
         """
         db_conn = sql_conn.connect(
             host = "localhost",
-            user = "root",
-            passwd = "LabDB88",
+            user = "< username >",
+            passwd = "< password >",
             database = self.db_name,
         )
         return db_conn
@@ -232,7 +232,7 @@ class TeleData:
                         print(colored(f"Exception Occurred:: {e}", "red"))
 
 if __name__ == '__main__':
-    db = TeleData(dbname = "isn04dm")
+    db = TeleData(dbname = "< database name >")
     connection_status = db.test_connection()
     if connection_status:
         db.show_tables()
