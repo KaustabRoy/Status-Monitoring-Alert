@@ -12,7 +12,7 @@ class IOModAcVal:
 
     def test_get_chsettings_data(self):
         try:
-            conn = TeleData(dbname = "isn04dm").connect_db()
+            conn = TeleData(dbname = "< database name >").connect_db()
             db_cursor = conn.cursor()
             db_cursor.execute("select * from ch_settings")
             db_cursor.fetchall()
@@ -72,7 +72,7 @@ class IOModAcVal:
 
 
     def set_chmod_val(self, mod_val):
-        conn = TeleData("isn04dm").connect_db()
+        conn = TeleData("< database name >").connect_db()
         db_cursor = conn.cursor()
         for key in mod_val:
             # print(f"{key} : {mod_val[key]}")
